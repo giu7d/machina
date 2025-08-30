@@ -19,26 +19,12 @@
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
-    # helpers = import ./helpers/flake-helpers.nix inputs;
-    # inherit (helpers) mkMerge mkNixos;
-  in {
-    nixosConfigurations.hana = inputs.nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {
-        inherit inputs;
-      };
-      modules = [
+    helpers = import ./helpers/flake-helpers.nix inputs;
+    inherit (helpers) mkMerge mkNixos;
+  in
+    mkMerge [
+      (mkNixos "hana" inputs.nixpkgs [
         # inputs.agenix.nixosModules.default
-        ./machines/__core__
-        ./machines/hana
-        ./users/giuseppe
-      ];
-    };
-  };
-  # mkMerge [
-  #   (mkNixos "hana" inputs.nixpkgs [
-  #     # hello world
-  #     nixpkgs.legacyPackages.x86_64-linux.hello
-  #   ])
-  # ];
+      ])
+    ];
 }

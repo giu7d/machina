@@ -7,8 +7,9 @@ inputs: {
       };
       modules =
         [
-          # ./machines/__core__
+          ./machines/__core__
           ./machines/${machineHostname}
+          ./users/giuseppe
         ]
         ++ extraModules;
     };
