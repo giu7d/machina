@@ -2,6 +2,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable?shallow=true";
+    # Manage Secrets
+    # TODO: undestand how to use secrets.
+    # agenix = {
+    #   url = "github:ryantm/agenix?shallow=true";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # home-manager = {
     #   url = "github:nix-community/home-manager/release-25.05?shallow=true";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -22,8 +28,10 @@
         inherit inputs;
       };
       modules = [
-        # ./machines/__core__
+        # inputs.agenix.nixosModules.default
+        ./machines/__core__
         ./machines/hana
+        ./users/giuseppe
       ];
     };
   };
