@@ -1,4 +1,5 @@
-inputs: {
+inputs: let
+in {
   mkNixos = machineHostname: nixpkgsVersion: extraModules: {
     nixosConfigurations.${machineHostname} = nixpkgsVersion.lib.nixosSystem {
       system = "x86_64-linux";
@@ -7,9 +8,9 @@ inputs: {
       };
       modules =
         [
-          ./machines/__core__
-          ./machines/${machineHostname}
-          ./users/giuseppe
+          ../machines/__core__
+          ../machines/${machineHostname}
+          ../users/giuseppe
         ]
         ++ extraModules;
     };
