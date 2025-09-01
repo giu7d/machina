@@ -8,20 +8,27 @@
   #
   system.stateVersion = "25.05";
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = true;
 
-  # TODO: Validate automatic snapshot removal
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+  nix.optimise.automatic = true;
+  nix.optimise.dates = ["weekly"];
+
   #
-  # nix.gc = {
-  #   automatic = true;
-  #   dates = "weekly";
-  #   options = "--delete-older-than 30d";
-  # };
-  # nix.optimise.automatic = true;
-  # nix.optimise.dates = ["weekly"];
+  # Base BTRFS Filesystem
+  #
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "monthly";
+    fileSystems = ["/"];
+  };
 
   #
   # Base Locale

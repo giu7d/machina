@@ -19,44 +19,38 @@
                 mountOptions = ["umask=0077"];
               };
             };
+            swap = {
+              size = "16G"; # ajuste de acordo com sua RAM
+              content = {
+                type = "swap";
+              };
+            };
             root = {
               size = "100%";
               content = {
                 type = "btrfs";
-                extraArgs = ["-f"]; # Override existing partition
-                # Subvolumes must set a mountpoint in order to be mounted,
-                # unless their parent is mounted
+                extraArgs = ["-f"];
                 subvolumes = {
-                  # Subvolume name is different from mountpoint
                   "/root" = {
                     mountpoint = "/";
                     mountOptions = ["subvol=root" "compress=zstd" "noatime"];
                   };
-                  # Subvolume name is the same as the mountpoint
                   "/home" = {
                     mountpoint = "/home";
                     mountOptions = ["subvol=home" "compress=zstd" "noatime"];
                   };
-                  # Parent is not mounted so the mountpoint must be set
                   "/nix" = {
                     mountpoint = "/nix";
                     mountOptions = ["subvol=nix" "compress=zstd" "noatime"];
-                  
                   };
-                  # "/nix/persist" = {
-                  #   mountpoint = "/nix/persist";
-                  #   mountOptions = ["subvol=persist" "compress=zstd" "noatime"];
-                  # };
-                  "/log" = {
+                  "/var/log" = {
                     mountpoint = "/var/log";
                     mountOptions = ["subvol=log" "compress=zstd" "noatime"];
                   };
-                  "/lib" = {
-                    mountpoint = "/var/lib";
-                    mountOptions = ["subvol=lib" "compress=zstd" "noatime"];
+                  "/var/cache" = {
+                    mountpoint = "/var/cache";
+                    mountOptions = ["subvol=cache" "compress=zstd" "noatime"];
                   };
-                  # This subvolume will be created but not mounted
-                  "/test" = {};
                 };
               };
             };
@@ -65,8 +59,4 @@
       };
     };
   };
-
-  # fileSystems."/persist".neededForBoot = true;
-  # fileSystems."/var/log".neededForBoot = true;
-  # fileSystems."/var/lib".neededForBoot = true;
 }

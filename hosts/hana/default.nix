@@ -5,9 +5,8 @@
 }: {
   imports = [
     ./hardware/default.nix
-    ./hardware/storage.nix
+    ./hardware/disk.nix
     ./hardware/gpu.nix
-    # ./hardware/zram.nix
   ];
 
   #
@@ -17,7 +16,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # custom.zram.enable = true;
+  # Detectar UUID da partição de swap e configurar resume
+  # boot.resumeDevice = "/dev/disk/by-uuid/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
+  # Ativar hibernação (systemd + kernel)
+  # boot.kernelParams = ["resume=/dev/disk/by-uuid/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"];
 
   #
   # Network
