@@ -2,6 +2,14 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable?shallow=true";
+
+    impermanence.url = "github:nix-community/impermanence";
+
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Manage Secrets
     # TODO: undestand how to use secrets.
     # agenix = {
@@ -24,7 +32,6 @@
   in
     mkMerge [
       (mkNixos "hana" inputs.nixpkgs [
-        # inputs.agenix.nixosModules.default
-      ])
+        ])
     ];
 }

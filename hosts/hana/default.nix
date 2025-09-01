@@ -4,8 +4,10 @@
   ...
 }: {
   imports = [
-    ./hardware/base.nix
+    ./hardware/default.nix
+    ./hardware/storage.nix
     ./hardware/gpu.nix
+    ./hardware/zram.nix
   ];
 
   #
@@ -14,6 +16,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  custom.zram.enable = true;
 
   #
   # Network
