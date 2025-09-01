@@ -8,7 +8,6 @@ in {
       };
       modules =
         [
-          inputs.disko.nixosModules.disko
           # TODO: Understand impermanence
           # inputs.impermanence.nixosModules.impermanence
           # TODO: Understand secrets
@@ -16,6 +15,7 @@ in {
           ../hosts/__default__
           ../hosts/${machineHostname}
           ../users/giuseppe
+          inputs.disko.nixosModules.disko
         ]
         ++ extraModules;
     };

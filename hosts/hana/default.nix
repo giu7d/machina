@@ -7,7 +7,7 @@
     ./hardware/default.nix
     ./hardware/storage.nix
     ./hardware/gpu.nix
-    ./hardware/zram.nix
+    # ./hardware/zram.nix
   ];
 
   #
@@ -17,7 +17,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  custom.zram.enable = true;
+  # custom.zram.enable = true;
 
   #
   # Network

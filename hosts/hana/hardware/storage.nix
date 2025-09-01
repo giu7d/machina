@@ -10,8 +10,7 @@
             ESP = {
               priority = 1;
               name = "ESP";
-              start = "1M";
-              end = "2G";
+              size = "2G";
               type = "EF00";
               content = {
                 type = "filesystem";
@@ -38,21 +37,16 @@
                     mountpoint = "/home";
                     mountOptions = ["subvol=home" "compress=zstd" "noatime"];
                   };
-                  # Sub(sub)volume doesn't need a mountpoint as its parent is mounted
-                  "/home/user" = {};
                   # Parent is not mounted so the mountpoint must be set
                   "/nix" = {
-                    mountOptions = [
-                      "subvol=nix"
-                      "compress=zstd"
-                      "noatime"
-                    ];
                     mountpoint = "/nix";
+                    mountOptions = ["subvol=nix" "compress=zstd" "noatime"];
+                  
                   };
-                  "/nix/persist" = {
-                    mountpoint = "/nix/persist";
-                    mountOptions = ["subvol=persist" "compress=zstd" "noatime"];
-                  };
+                  # "/nix/persist" = {
+                  #   mountpoint = "/nix/persist";
+                  #   mountOptions = ["subvol=persist" "compress=zstd" "noatime"];
+                  # };
                   "/log" = {
                     mountpoint = "/var/log";
                     mountOptions = ["subvol=log" "compress=zstd" "noatime"];
@@ -72,7 +66,7 @@
     };
   };
 
-  fileSystems."/persist".neededForBoot = true;
-  fileSystems."/var/log".neededForBoot = true;
-  fileSystems."/var/lib".neededForBoot = true;
+  # fileSystems."/persist".neededForBoot = true;
+  # fileSystems."/var/log".neededForBoot = true;
+  # fileSystems."/var/lib".neededForBoot = true;
 }
