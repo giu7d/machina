@@ -8,8 +8,8 @@ in {
       };
       modules =
         [
-          ../machines/__core__
-          ../machines/${machineHostname}
+          ../hosts/__default__
+          ../hosts/${machineHostname}
           ../users/giuseppe
         ]
         ++ extraModules;
