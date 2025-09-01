@@ -15,13 +15,14 @@
             ESP = {
               priority = 1;
               name = "ESP";
-              size = "2G";
+              start = "1M";
+              end = "2G";
               type = "EF00";
               content = {
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
-                mountOptions = ["fmask=0077" "dmask=0077"];
+                mountOptions = ["umask=0077"];
               };
             };
             root = {
