@@ -1,17 +1,4 @@
 {pkgs, ...}: {
-  #
-  # Bootloader
-  #
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    timeout = 0;
-  };
-
-  #
-  # Kernel
-  #
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "quiet"
     "splash"
@@ -20,9 +7,6 @@
     "rd.systemd.show_status=auto"
   ];
 
-  #
-  # Plymouth
-  #
   boot.plymouth = {
     enable = true;
     theme = "rings";
@@ -34,7 +18,7 @@
     ];
   };
 
-  # Silent boot
   boot.consoleLogLevel = 3;
   boot.initrd.verbose = false;
+  boot.loader.timeout = 0;
 }
