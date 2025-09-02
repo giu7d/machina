@@ -13,6 +13,14 @@
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
+    prime = {
+      sync.enable = true;
+
+      amdgpuBusId = "PCI:05:0:0"; # integrated
+
+      nvidiaBusId = "PCI:01:0:0"; # dedicated
+    };
+
     # Modesetting is required.
     modesetting.enable = true;
 

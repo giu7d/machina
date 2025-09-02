@@ -4,9 +4,8 @@
   ...
 }: {
   imports = [
-    ./hardware/default.nix
-    ./hardware/disk.nix
-    ./hardware/gpu.nix
+    ./hardware
+    ./file-system.nix
   ];
 
   #
