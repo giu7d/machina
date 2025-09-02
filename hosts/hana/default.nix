@@ -65,12 +65,6 @@
   #
   console.keyMap = "us-acentos";
   services.printing.enable = true;
-  # Add cedilla support
-  environment.etc."XCompose".text = ''
-    include "%L"
-    <dead_acute> <C> : "Ç"
-    <dead_acute> <c> : "ç"
-  '';
 
   #
   # Packages
