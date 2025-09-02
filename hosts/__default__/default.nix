@@ -48,8 +48,14 @@
     LC_PAPER = "pt_BR.UTF-8";
     LC_TELEPHONE = "pt_BR.UTF-8";
     LC_TIME = "pt_BR.UTF-8";
-    LC_CTYPE = lib.mkDefault "pt_BR.UTF-8"; # Fix ç in us-intl.
+    LC_CTYPE = lib.mkDefault "pt_BR.UTF-8"; # Add cedilla support
   };
+  # Add cedilla support
+  environment.variables = {
+    GTK_IM_MODULE = "cedilla";
+    QT_IM_MODULE = "cedilla";
+  };
+
   #
   # Base Applications
   #
