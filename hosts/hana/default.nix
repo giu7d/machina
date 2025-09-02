@@ -16,10 +16,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Detectar UUID da partição de swap e configurar resume
-  # boot.resumeDevice = "/dev/disk/by-uuid/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
-  # Ativar hibernação (systemd + kernel)
-  # boot.kernelParams = ["resume=/dev/disk/by-uuid/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"];
+  #
+  # Hibernation
+  #
+  boot.kernelParams = ["resume=/dev/disk/by-uuid/435e2500-5115-4cdd-b0cd-a6a2d25225d6"];
+  boot.resumeDevice = "/dev/disk/by-uuid/435e2500-5115-4cdd-b0cd-a6a2d25225d6";
 
   #
   # Network
