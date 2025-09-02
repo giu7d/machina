@@ -21,7 +21,12 @@
   #
   boot.kernelParams = ["resume=/dev/disk/by-uuid/435e2500-5115-4cdd-b0cd-a6a2d25225d6"];
   boot.resumeDevice = "/dev/disk/by-uuid/435e2500-5115-4cdd-b0cd-a6a2d25225d6";
-
+  # Prevent black screen on resume
+  systemd.services."systemd-suspend" = {
+    serviceConfig = {
+      Environment = ''"SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false"'';
+    };
+  };
   #
   # Network
   #
