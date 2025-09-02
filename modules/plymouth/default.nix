@@ -9,11 +9,11 @@
 
   boot.plymouth = {
     enable = true;
-    theme = "rings";
+    theme = "hexagon_2";
     themePackages = with pkgs; [
       # By default we would install all themes
       (adi1090x-plymouth-themes.override {
-        selected_themes = ["rings"];
+        selected_themes = ["hexagon_2"];
       })
     ];
   };
