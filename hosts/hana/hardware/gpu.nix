@@ -27,7 +27,7 @@
     powerManagement.finegrained = false;
 
     prime = {
-      prime.sync.enable = true;
+      sync.enable = true;
       amdgpuBusId = "PCI:05:0:0"; # integrated
       nvidiaBusId = "PCI:01:0:0"; # dedicated
     };
@@ -36,10 +36,10 @@
   specialisation = {
     on-the-go.configuration = {
       system.nixos.tags = ["on-the-go"];
-      hardware.nvidia = {
-        prime.offload.enable = lib.mkForce true;
-        prime.offload.enableOffloadCmd = lib.mkForce true;
-        prime.sync.enable = lib.mkForce false;
+      hardware.nvidia.prime = {
+        sync.enable = lib.mkForce false;
+        offload.enable = lib.mkForce true;
+        offload.enableOffloadCmd = lib.mkForce true;
       };
     };
   };
