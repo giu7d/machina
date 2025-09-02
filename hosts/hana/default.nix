@@ -28,6 +28,7 @@
       Environment = ''"SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false"'';
     };
   };
+
   #
   # Network
   #
@@ -64,6 +65,12 @@
   #
   console.keyMap = "us-acentos";
   services.printing.enable = true;
+  # Add cedilla support
+  environment.etc."XCompose".text = ''
+    include "%L"
+    <dead_acute> <C> : "Ç"
+    <dead_acute> <c> : "ç"
+  '';
 
   #
   # Packages
