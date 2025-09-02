@@ -7,14 +7,8 @@
     ./hardware/default.nix
     ./hardware/disk.nix
     ./hardware/gpu.nix
+    ./boot.nix
   ];
-
-  #
-  # Bootloader
-  #
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   #
   # Hibernation
