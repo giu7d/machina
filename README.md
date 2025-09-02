@@ -33,8 +33,8 @@ sudo nixos-rebuild switch --flake <path>#<host>
 
 - [x] Setup flakes
 - [x] Setup BTRFS
-- [ ] Setup plymouth
-- [ ] Improve boot speed
+- [x] Setup plymouth
+- [x] Improve boot speed
 - [ ] Setup home manager
 - [ ] Setup user
 - [ ] Improve gaming performance
