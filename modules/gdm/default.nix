@@ -15,6 +15,10 @@
             accent-color = "slate";
             color-scheme = "prefer-dark";
           };
+
+          "org/gnome/login-screen" = {
+            logo = "";
+          };
         };
       }
     ];
