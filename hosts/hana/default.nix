@@ -21,7 +21,6 @@
   boot.kernelParams = [
     "resume=/dev/disk/by-uuid/435e2500-5115-4cdd-b0cd-a6a2d25225d6"
     "amdgpu.backlight=0"
-    "acpi_backlight=none"
   ];
   boot.resumeDevice = "/dev/disk/by-uuid/435e2500-5115-4cdd-b0cd-a6a2d25225d6";
   powerManagement.enable = true;
