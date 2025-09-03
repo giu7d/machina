@@ -31,6 +31,7 @@
       (mkNixos "hana" inputs.nixpkgs [
         ./modules/plymouth
         ./modules/gdm
+        ./modules/gnome
       ])
     ];
 }
