@@ -30,6 +30,7 @@
     mkMerge [
       (mkNixos "hana" inputs.nixpkgs [
         ./modules/plymouth
+        ./modules/gdm
       ])
     ];
 }
