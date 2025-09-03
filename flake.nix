@@ -34,6 +34,8 @@
           ./modules/global/gdm
         ]
         # Home Modules
-        [])
+        [
+          ./modules/home/gtk
+        ])
     ];
 }
