@@ -1,6 +1,17 @@
 inputs: let
+  mkHomeManagerConfig = extraImports: {
+    home-manager.useGlobalPkgs = false;
+    home-manager.useUserPackages = true;
+    home-manager.backupFileExtension = "bak";
+    home-manager.extraSpecialArgs = {inherit inputs;};
+    home-manager.users.giuseppe.imports =
+      [
+        ../users/giuseppe/configs/gitconfig.nix
+      ]
+      ++ extraImports;
+  };
 in {
-  mkNixos = machineHostname: nixpkgsVersion: extraModules: {
+  mkNixos = machineHostname: nixpkgsVersion: extraModules: extraHomeModules: {
     nixosConfigurations.${machineHostname} = nixpkgsVersion.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {
@@ -8,12 +19,13 @@ in {
       };
       modules =
         [
+          inputs.disko.nixosModules.disko
+          inputs.home-manager.nixosModules.home-manager
           ../hosts/__default__
           ../hosts/${machineHostname}
           ../users/giuseppe
-          inputs.disko.nixosModules.disko
-          # TODO: Understand secrets
-          # inputs.agenix.nixosModules.default
+          # Setup User Specific Configurations
+          (mkHomeManagerConfig extraHomeModules)
         ]
         ++ extraModules;
     };
