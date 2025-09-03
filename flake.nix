@@ -30,11 +30,10 @@
       (mkNixos "hana" inputs.nixpkgs
         # Global Modules
         [
-          ./modules/plymouth
-          ./modules/gdm
-          ./modules/gnome
+          ./modules/global/plymouth
+          ./modules/global/gdm
         ]
-        # User Modules
+        # Home Modules
         [])
     ];
 }
