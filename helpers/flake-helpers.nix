@@ -6,6 +6,7 @@ inputs: let
     home-manager.extraSpecialArgs = {inherit inputs;};
     home-manager.users.giuseppe.imports =
       [
+        ../users/giuseppe/configs/home.nix
         ../users/giuseppe/configs/gitconfig.nix
       ]
       ++ extraImports;
