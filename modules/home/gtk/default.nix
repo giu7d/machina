@@ -14,6 +14,12 @@
   ];
 
   dconf.settings = {
+    # Setup title bar buttons
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = ":minimize,maximize,close";
+    };
+
+    # Enable extensions
     "org/gnome/shell" = {
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
