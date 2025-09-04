@@ -60,15 +60,6 @@
       show-windows-preview = true;
       transparency-mode = "FIXED";
     };
-
-    #
-    # Setup extension blur-my-shell
-    #
-    "org/gnome/shell/extensions/blur-my-shell" = {
-      pipelines = ''
-        {'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000000'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_81088099055859': {'name': <'Dash'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_86704493733674'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.80000000000000004>}>}>, <{'type': <'corner'>, 'id': <'effect_79715918997755'>, 'params': <{'radius': <14>}>}>]>}}
-      '';
-    };
   };
 
   #
