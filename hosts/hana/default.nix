@@ -73,5 +73,6 @@
     alejandra
     vscode
     gh
+    dconf-editor
   ];
 }
