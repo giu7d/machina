@@ -36,6 +36,7 @@
         # Home Modules
         [
           ./modules/home/gtk
+          ./modules/home/applications
         ])
     ];
 }

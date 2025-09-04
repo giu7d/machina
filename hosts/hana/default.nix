@@ -68,11 +68,7 @@
   #
   # Packages
   #
+  services.flatpak.enable = true;
   programs.firefox.enable = true;
-  environment.systemPackages = with pkgs; [
-    alejandra
-    vscode
-    gh
-    dconf-editor
-  ];
+  environment.systemPackages = with pkgs; [];
 }
