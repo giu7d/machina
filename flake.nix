@@ -14,6 +14,7 @@
       url = "github:nix-community/home-manager/master?shallow=true";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
     # Manage Secrets
     # TODO: undestand how to use secrets.
     # agenix = {

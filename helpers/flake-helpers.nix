@@ -22,6 +22,7 @@ in {
         [
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
+          inputs.nix-flatpak.nixosModules.nix-flatpak
           ../hosts/__default__
           ../hosts/${machineHostname}
           ../users/giuseppe
