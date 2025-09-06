@@ -40,6 +40,7 @@
           ./modules/home/applications
           ./modules/home/kitty
           ./modules/home/fonts
+          ./modules/home/zsh
         ])
     ];
 }
