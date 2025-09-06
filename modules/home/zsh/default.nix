@@ -1,4 +1,5 @@
 {
+  lib,
   config,
   pkgs,
   ...
@@ -23,7 +24,7 @@ in {
 
     oh-my-zsh = {
       enable = true;
-      theme = "typewritten/typewritten";
+      theme = "typewritten";
       plugins = [
         "asdf"
         "gh"
@@ -34,7 +35,7 @@ in {
       custom = "${typewrittenTheme}";
     };
 
-    initContent = ''
+    initContent = lib.mkOrder 500 ''
       export TYPEWRITTEN_SYMBOL="->"
       export TYPEWRITTEN_CURSOR="underscore"
       export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
