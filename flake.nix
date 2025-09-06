@@ -39,6 +39,7 @@
           ./modules/home/gtk
           ./modules/home/applications
           ./modules/home/kitty
+          ./modules/home/fonts
         ])
     ];
 }
