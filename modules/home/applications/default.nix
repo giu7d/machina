@@ -25,6 +25,7 @@
     yubioath-flutter
     protonvpn-gui
     # Personal
+    gnome-software
     youtube-music
     asdf-vm
   ];
@@ -33,11 +34,13 @@
   # Setup Flatpak
   #
   services.flatpak.packages = [
-    "io.github.kolunmi.Bazaar" # Bazaar
+    # Security
     "com.bitwarden.desktop" # Bitwarden
     # Browsers
     "app.zen_browser.zen" # Zen Browser
     "com.brave.Browser" # Brave Browser
+    # Notes
+    "md.obsidian.Obsidian" # Obsidian
     # Image & Media
     "com.github.huluti.Coulr" # Coulr
     "io.gitlab.adhami3310.Converter" # Converter
