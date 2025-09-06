@@ -35,11 +35,19 @@ in {
       custom = "${typewrittenTheme}";
     };
 
-    initContent = lib.mkOrder 500 ''
-      export TYPEWRITTEN_SYMBOL="->"
-      export TYPEWRITTEN_CURSOR="underscore"
-      export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
-    '';
+    initContent = lib.mkMerge [
+      (lib.mkOrder 500 ''
+        export TYPEWRITTEN_SYMBOL="->"
+        export TYPEWRITTEN_CURSOR="underscore"
+        export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
+      '')
+      (lib.mkOrder 1000 ''
+        . "${pkgs.asdf-vm}/share/asdf-vm/asdf.sh"
+        fpath=("${pkgs.asdf-vm}/share/asdf-vm/completions" $fpath)
+        autoload -Uz compinit
+        compinit
+      '')
+    ];
   };
 
   home.file.".zshenv".text = ''
