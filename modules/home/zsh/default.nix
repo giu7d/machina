@@ -69,7 +69,7 @@ in {
       # Nix aliases
       nix-check = "nix flake check $FLAKE_HOME";
       nix-upgrade = ''
-        nix flake update "$FLAKE_HOME" || return 1
+        nix flake update --flake "$FLAKE_HOME" || return 1
         cd "$FLAKE_HOME" || return 1
         git add flake.lock
         git commit -m "chore: update nix flake" || echo "Nothing to commit"
