@@ -79,4 +79,9 @@
   };
 
   environment.systemPackages = with pkgs; [];
+
+  environment.sessionVariables = {
+    FLAKE_HOME = "$HOME/Workspaces/machina";
+    FLAKE_HOST = "hana";
+  };
 }

@@ -25,29 +25,59 @@ in {
     oh-my-zsh = {
       enable = true;
       theme = "typewritten";
+      custom = "${typewrittenTheme}";
       plugins = [
-        "asdf"
         "gh"
         "git"
         "npm"
         "sdk"
       ];
-      custom = "${typewrittenTheme}";
     };
 
     initContent = lib.mkMerge [
+      # Configure typewritten theme
       (lib.mkOrder 500 ''
         export TYPEWRITTEN_SYMBOL="->"
         export TYPEWRITTEN_CURSOR="underscore"
         export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
       '')
+      # Asdf completion and initialization
       (lib.mkOrder 1000 ''
         . "${pkgs.asdf-vm}/share/asdf-vm/asdf.sh"
         fpath=("${pkgs.asdf-vm}/share/asdf-vm/completions" $fpath)
+      '')
+      # Start zsh completion system
+      (lib.mkOrder 1100 ''
         autoload -Uz compinit
         compinit
       '')
     ];
+
+    shellAliases = {
+      # Basic aliases
+      c = "clear";
+      x = "exit";
+      cp = "cp -rv";
+      rm = "rm -rIv";
+      mv = "mv -v";
+      mkdir = "mkdir -p";
+
+      # Vim aliases
+      vim = "nvim";
+      edit = "nvim";
+
+      # Nix aliases
+      nix-check = "nix flake check $FLAKE_HOME";
+      nix-upgrade = ''
+        nix flake update "$FLAKE_HOME" || return 1
+        cd "$FLAKE_HOME" || return 1
+        git add flake.lock
+        git commit -m "chore: update nix flake" || echo "Nothing to commit"
+        sudo nixos-rebuild switch --flake "$FLAKE_HOME#$FLAKE_HOST"
+      '';
+      nix-rebuild = "sudo nixos-rebuild switch --flake $FLAKE_HOME#$FLAKE_HOST";
+      nix-rebuild-boot = "sudo nixos-rebuild boot --flake $FLAKE_HOME#$FLAKE_HOST";
+    };
   };
 
   home.file.".zshenv".text = ''
