@@ -29,6 +29,8 @@
     gnome-software
     youtube-music
     asdf-vm
+    # Games
+    lutris
   ];
 
   #
