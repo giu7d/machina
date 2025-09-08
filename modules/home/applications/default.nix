@@ -18,6 +18,7 @@
   home.packages = with pkgs; [
     alejandra
     dconf-editor
+    btop
     # Development
     vscode
     gh
