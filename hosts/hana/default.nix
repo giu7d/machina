@@ -80,6 +80,9 @@
 
   environment.systemPackages = with pkgs; [];
 
+  #
+  # Environment Variables
+  #
   environment.sessionVariables = {
     FLAKE_HOME = "$HOME/Workspaces/machina";
     FLAKE_HOST = "hana";
