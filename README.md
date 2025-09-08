@@ -11,7 +11,7 @@ All my NixOS systems configuration in a single place.
 
 Update flake
 
-```
+```bash
 nix flake update
 ```
 
@@ -25,16 +25,5 @@ Execute flake
 
 ```bash
 sudo nixos-rebuild switch --flake <path>#<host>
-
 # sudo nixos-rebuild switch --flake ~/Workspaces/machina#hana
 ```
-
-## To Do
-
-- [x] Setup flakes
-- [x] Setup BTRFS
-- [x] Setup plymouth
-- [x] Improve boot speed
-- [ ] Setup home manager
-- [ ] Setup user
-- [ ] Improve gaming performance
