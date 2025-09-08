@@ -41,6 +41,7 @@
           ./modules/home/kitty
           ./modules/home/fonts
           ./modules/home/zsh
+          ./modules/home/fastfetch
         ])
     ];
 }
