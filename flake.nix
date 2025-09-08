@@ -33,6 +33,7 @@
         [
           ./modules/global/plymouth
           ./modules/global/gdm
+          ./modules/global/steam
         ]
         # Home Modules
         [
