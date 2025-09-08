@@ -33,7 +33,7 @@
     # Setup extension dash-to-dock
     #
     "org/gnome/shell/extensions/dash-to-dock" = {
-      apply-custom-theme = true;
+      apply-custom-theme = false;
       background-opacity = 0.5;
       custom-background-color = false;
       custom-theme-shrink = true;
@@ -52,7 +52,7 @@
       show-favorites = true;
       show-trash = true;
       show-windows-preview = true;
-      transparency-mode = "FIXED";
+      transparency-mode = "DYNAMIC";
     };
   };
 }
