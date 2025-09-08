@@ -48,6 +48,7 @@
       preferred-monitor = -2;
       preferred-monitor-by-connector = "DP-3";
       preview-size-scale = 0.0;
+      show-apps-at-top = true;
       show-favorites = true;
       show-trash = true;
       show-windows-preview = true;
