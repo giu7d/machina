@@ -15,12 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
-    # Manage Secrets
-    # TODO: undestand how to use secrets.
-    # agenix = {
-    #   url = "github:ryantm/agenix?shallow=true";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
