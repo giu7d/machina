@@ -28,7 +28,6 @@
     # Personal
     gnome-software
     youtube-music
-    asdf-vm
   ];
 
   #

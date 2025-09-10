@@ -41,16 +41,6 @@ in {
         export TYPEWRITTEN_CURSOR="underscore"
         export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
       '')
-      # Asdf completion and initialization
-      (lib.mkOrder 550 ''
-        . "${pkgs.asdf-vm}/share/asdf-vm/asdf.sh"
-        fpath=("${pkgs.asdf-vm}/share/asdf-vm/completions" $fpath)
-      '')
-      # Start zsh completion system
-      (lib.mkOrder 1100 ''
-        autoload -Uz compinit
-        compinit
-      '')
     ];
 
     shellAliases = {
