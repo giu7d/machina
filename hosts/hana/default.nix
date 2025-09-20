@@ -87,4 +87,14 @@
     FLAKE_HOME = "$HOME/Workspaces/machina";
     FLAKE_HOST = "hana";
   };
+
+  #
+  # Keyboard Firmware
+  #
+  services.udev = {
+    packages = with pkgs; [
+      qmk
+      qmk-udev-rules
+    ];
+  };
 }
