@@ -91,10 +91,10 @@
   #
   # Keyboard Firmware
   #
-  services.udev = {
-    packages = with pkgs; [
-      qmk
-      qmk-udev-rules
-    ];
-  };
+  services.udev.packages = with pkgs; [
+    qmk-udev-rules
+    qmk
+    via
+    vial
+  ];
 }
