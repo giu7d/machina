@@ -78,7 +78,24 @@
     '';
   };
 
-  environment.systemPackages = with pkgs; [];
+  #
+  # Keyboard Firmware
+  #
+  services.udev.packages = with pkgs; [
+    # Keyboard
+    qmk-udev-rules
+    qmk
+    via
+    vial
+  ];
+
+  environment.systemPackages = with pkgs; [
+    # Keyboard
+    qmk
+    qmk-udev-rules
+    via
+    vial
+  ];
 
   #
   # Environment Variables
@@ -87,14 +104,4 @@
     FLAKE_HOME = "$HOME/Workspaces/machina";
     FLAKE_HOST = "hana";
   };
-
-  #
-  # Keyboard Firmware
-  #
-  services.udev.packages = with pkgs; [
-    qmk-udev-rules
-    qmk
-    via
-    vial
-  ];
 }
