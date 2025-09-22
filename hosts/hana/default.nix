@@ -86,6 +86,7 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run
+    iptables
     # Keyboard
     qmk
     qmk-udev-rules
