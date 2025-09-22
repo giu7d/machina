@@ -33,6 +33,7 @@
   #
   networking.hostName = "hana";
   networking.networkmanager.enable = true;
+  networking.firewall.enable = true;
 
   #
   # Desktop Environment
