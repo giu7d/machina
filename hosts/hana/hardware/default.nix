@@ -17,7 +17,7 @@
 
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid"];
   boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd"];
+  boot.kernelModules = ["kvm-amd" "iptable_nat"];
   boot.extraModulePackages = [];
 
   networking.useDHCP = lib.mkDefault true;
