@@ -78,6 +78,20 @@
     '';
   };
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    appimage-run
+    # Keyboard
+    qmk
+    qmk-udev-rules
+    via
+    vial
+  ];
+
   #
   # Keyboard Firmware
   #
@@ -85,14 +99,6 @@
     # Keyboard
     qmk-udev-rules
     qmk
-    via
-    vial
-  ];
-
-  environment.systemPackages = with pkgs; [
-    # Keyboard
-    qmk
-    qmk-udev-rules
     via
     vial
   ];
