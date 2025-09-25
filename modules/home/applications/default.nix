@@ -56,7 +56,5 @@
     "com.discordapp.Discord" # Discord
     # Games
     "com.usebottles.bottles" # Bottles
-    # Others
-    "com.freerdp.FreeRDP"
   ];
 }

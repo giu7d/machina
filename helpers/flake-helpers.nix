@@ -23,6 +23,7 @@ in {
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nix-flatpak.nixosModules.nix-flatpak
+          inputs.winboat.nixosModules."x86_64-linux".default
           ../hosts/__default__
           ../hosts/${machineHostname}
           ../users/giuseppe

@@ -15,6 +15,7 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
+    winboat.url = "github:TibixDev/winboat";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -29,6 +30,7 @@
           ./modules/global/gdm
           ./modules/global/steam
           ./modules/global/docker
+          ./modules/global/winboat
         ]
         # Home Modules
         [
