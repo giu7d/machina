@@ -28,6 +28,7 @@
           ./modules/global/plymouth
           ./modules/global/gdm
           ./modules/global/steam
+          ./modules/global/docker
         ]
         # Home Modules
         [
