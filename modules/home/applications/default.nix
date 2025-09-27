@@ -19,6 +19,7 @@
     alejandra
     dconf-editor
     btop
+    transmission_4-gtk
     # Development
     vscode
     gh
