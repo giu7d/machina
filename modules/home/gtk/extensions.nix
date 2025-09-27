@@ -55,4 +55,10 @@
       transparency-mode = "DYNAMIC";
     };
   };
+
+  # Enable GSConnect (KDE Connect for GNOME)
+  services.kdeconnect = {
+    enable = true;
+    package = pkgs.gnomeExtensions.gsconnect;
+  };
 }
