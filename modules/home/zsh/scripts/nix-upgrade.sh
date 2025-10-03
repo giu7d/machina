@@ -10,7 +10,7 @@ nix flake update --flake "$FLAKE_HOME" || return 1
 
 git add flake.lock
 
-git commit -m "chore: update nix flake" | /dev/null || echo "Nothing to commit"
+git commit -m "chore: update nix flake" > /dev/null || echo "Nothing to commit"
 
 sudo nixos-rebuild switch --flake "$FLAKE_HOME#$FLAKE_HOST"
 
