@@ -20,14 +20,16 @@ in {
       };
       modules =
         [
+          # External Modules
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nix-flatpak.nixosModules.nix-flatpak
-          inputs.winboat.nixosModules."x86_64-linux".default
+          # inputs.winboat.nixosModules.winboat
+          # Base Modules
           ../hosts/__default__
           ../hosts/${machineHostname}
           ../users/giuseppe
-          # Setup User Specific Configurations
+          # User Modules
           (mkHomeManagerConfig extraHomeModules)
         ]
         ++ extraModules;

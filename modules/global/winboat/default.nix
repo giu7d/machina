@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  services.winboat.enable = true;
+  # services.winboat.enable = true;
 }
