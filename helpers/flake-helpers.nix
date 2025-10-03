@@ -24,7 +24,6 @@ in {
           inputs.disko.nixosModules.disko
           inputs.home-manager.nixosModules.home-manager
           inputs.nix-flatpak.nixosModules.nix-flatpak
-          # inputs.winboat.nixosModules.winboat
           # Base Modules
           ../hosts/__default__
           ../hosts/${machineHostname}
