@@ -31,6 +31,7 @@
         [
           ./modules/global/plymouth
           ./modules/global/gdm
+          ./modules/global/keyboard
           ./modules/global/steam
           ./modules/global/docker
           ./modules/global/winboat

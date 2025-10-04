@@ -71,7 +71,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # To use JACK applications:
-    #jack.enable = true;
+    # jack.enable = true;
   };
 
   #
@@ -101,22 +101,6 @@
   environment.systemPackages = with pkgs; [
     appimage-run
     iptables
-    # Keyboard
-    qmk
-    qmk-udev-rules
-    via
-    vial
-  ];
-
-  #
-  # Keyboard Firmware
-  #
-  services.udev.packages = with pkgs; [
-    # Keyboard
-    qmk-udev-rules
-    qmk
-    via
-    vial
   ];
 
   #

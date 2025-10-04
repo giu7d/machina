@@ -59,12 +59,13 @@
   #
   # Base Applications
   #
+  programs.git.enable = true;
+  programs.neovim.enable = true;
+
   environment.systemPackages = with pkgs; [
     wget
     lshw
     jq
-    git
-    neovim
     fastfetch
   ];
 }
