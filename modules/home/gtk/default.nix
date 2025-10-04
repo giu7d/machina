@@ -1,12 +1,8 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   imports = [
     ./extensions.nix
     ./theme.nix
+    ./keybinds.nix
   ];
 
   dconf.settings = {

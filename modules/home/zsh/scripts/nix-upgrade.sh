@@ -1,7 +1,5 @@
 CURRENT_DIR=$(pwd)
 
-
-
 echo "🔧 Updating the system…"
 
 cd "$FLAKE_HOME" || return 1

@@ -1,5 +1,4 @@
 {
-  lib,
   config,
   pkgs,
   ...
@@ -51,8 +50,8 @@
       show-apps-at-top = true;
       show-favorites = true;
       show-trash = true;
-      show-windows-preview = true;
       transparency-mode = "DYNAMIC";
+      show-windows-preview = true;
     };
   };
 
