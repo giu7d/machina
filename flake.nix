@@ -16,7 +16,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak?ref=v0.6.0";
     winboat = {
-      url = "github:TibixDev/winboat";
+      url = "github:TibixDev/winboat?ref=v0.8.5";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };

@@ -4,6 +4,6 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    inputs.winboat.packages."${pkgs.system}".winboat
+    inputs.winboat.packages."${pkgs.system}".default
   ];
 }
