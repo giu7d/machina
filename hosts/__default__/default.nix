@@ -23,6 +23,30 @@
   nix.optimise.dates = ["weekly"];
 
   #
+  # Base SSH
+  #
+  services.openssh = {
+    enable = lib.mkDefault true;
+    settings = {
+      PasswordAuthentication = lib.mkDefault false;
+      LoginGraceTime = 0;
+      PermitRootLogin = "no";
+    };
+    ports = [77];
+    hostKeys = [
+      {
+        path = "/etc/ssh/ssh_host_ed25519_key";
+        type = "ed25519";
+      }
+      {
+        path = "/etc/ssh/ssh_host_rsa_key";
+        type = "rsa";
+        bits = 4096;
+      }
+    ];
+  };
+
+  #
   # Base BTRFS Filesystem
   #
   services.btrfs.autoScrub = {
