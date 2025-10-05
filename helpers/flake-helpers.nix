@@ -22,6 +22,7 @@ in {
         [
           # External Modules
           inputs.disko.nixosModules.disko
+          inputs.sops.nixosModules.sops
           inputs.home-manager.nixosModules.home-manager
           inputs.nix-flatpak.nixosModules.nix-flatpak
           # Base Modules
