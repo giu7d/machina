@@ -33,6 +33,7 @@
     #
     "org/gnome/shell/extensions/dash-to-dock" = {
       apply-custom-theme = false;
+      background-color = "rgb(154,153,150)";
       background-opacity = 0.5;
       custom-background-color = false;
       custom-theme-shrink = true;
@@ -50,8 +51,38 @@
       show-apps-at-top = true;
       show-favorites = true;
       show-trash = true;
-      transparency-mode = "DYNAMIC";
       show-windows-preview = true;
+      transparency-mode = "DYNAMIC";
+    };
+
+    #
+    # Setup extension blur-my-shell
+    #
+    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+      blur = true;
+      brightness = 1.0;
+      override-background = false;
+      sigma = 50;
+      static-blur = false;
+      unblur-in-overview = true;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/panel" = {
+      brightness = 0.25;
+      force-light-text = false;
+      override-background = true;
+      sigma = 20;
+      static-blur = false;
+    };
+
+    "org/gnome/shell/extensions/blur-my-shell/applications" = {
+      blur = true;
+      blur-on-overview = false;
+      brightness = 1.0;
+      dynamic-opacity = false;
+      opacity = 255;
+      sigma = 50;
+      whitelist = ["kitty"];
     };
   };
 
