@@ -68,7 +68,7 @@
     };
 
     "org/gnome/shell/extensions/blur-my-shell/panel" = {
-      brightness = 0.25;
+      brightness = 0.8;
       force-light-text = false;
       override-background = true;
       sigma = 20;
