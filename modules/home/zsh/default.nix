@@ -59,6 +59,7 @@ in {
       # Nix aliases
       nix-check = "nix flake check $FLAKE_HOME";
       nix-upgrade = "${./scripts/nix-upgrade.sh}";
+      nix-push = "${./scripts/nix-push.sh}";
       nix-rebuild = "sudo nixos-rebuild switch --flake $FLAKE_HOME#$FLAKE_HOST";
       nix-rebuild-boot = "sudo nixos-rebuild boot --flake $FLAKE_HOME#$FLAKE_HOST";
     };
