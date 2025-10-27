@@ -43,6 +43,7 @@
     "com.brave.Browser" # Brave Browser
     # Notes
     "md.obsidian.Obsidian" # Obsidian
+    "io.anytype.anytype" # Anytype
     # Image & Media
     "com.github.huluti.Coulr" # Coulr
     "io.gitlab.adhami3310.Converter" # Converter
