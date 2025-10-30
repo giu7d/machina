@@ -4,6 +4,10 @@
   lib,
   ...
 }: {
+  imports = [
+    ./secrets.nix
+  ];
+
   #
   # Base Nix Setup
   #

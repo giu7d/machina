@@ -25,6 +25,7 @@ in {
           inputs.sops.nixosModules.sops
           inputs.home-manager.nixosModules.home-manager
           inputs.nix-flatpak.nixosModules.nix-flatpak
+          inputs.sops.nixosModules.sops
           # Base Modules
           ../hosts/__default__
           ../hosts/${machineHostname}
