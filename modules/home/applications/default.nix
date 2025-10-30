@@ -51,6 +51,7 @@
     "dev.geopjr.Calligraphy" # Calligraphy
     "tv.plex.PlexDesktop" # Plex
     "org.gnome.Decibels" # Decibels
+    "com.tomjwatson.Emote" # Emote
     # Development
     "rest.insomnia.Insomnia" # Insomnia
     "io.beekeeperstudio.Studio" # Beekeeper Studio
