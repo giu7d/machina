@@ -13,6 +13,8 @@
     };
 
     # secrets will be output to /run/secrets
-    secrets = {};
+    secrets = {
+      "public_keys/sora" = {};
+    };
   };
 }
