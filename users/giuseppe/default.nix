@@ -8,6 +8,8 @@ in {
 
   nix.settings.trusted-users = ["root" "giuseppe"];
 
+  # users.mutableUsers = false;
+
   users.users.giuseppe = {
     isNormalUser = true;
     description = "Giuseppe";
@@ -17,6 +19,10 @@ in {
       "networkmanager"
       "wheel"
       "docker"
+    ];
+
+    openssh.authorizedKeys.keys = [
+      (builtins.readFile ../../secrets/keys/id_sora.pub)
     ];
   };
 

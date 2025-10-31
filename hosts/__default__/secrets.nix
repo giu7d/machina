@@ -4,13 +4,11 @@
     validateSopsFiles = false;
 
     age = {
-      # automatically import host ssh keys as age keys
       sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+      keyFile = "/var/lib/sops-nix/keys.txt";
+      generateKey = true;
     };
 
-    # secrets will be output to /run/secrets
-    secrets = {
-      "public_keys/sora" = {};
-    };
+    secrets = {};
   };
 }
