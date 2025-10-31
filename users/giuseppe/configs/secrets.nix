@@ -8,10 +8,10 @@
     # secrets will be output to /run/secrets
     secrets = {
       "private_keys/giuseppe" = {
-        path = "/home/giuseppe/.ssh/id_giu";
+        path = "/home/giuseppe/.ssh/id_giuseppe";
       };
       "public_keys/giuseppe" = {
-        path = "/home/giuseppe/.ssh/id_giu.pub";
+        path = "/home/giuseppe/.ssh/id_giuseppe.pub";
       };
     };
   };
