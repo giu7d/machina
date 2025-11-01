@@ -1,8 +1,10 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: let
+  secretsPath = builtins.toString inputs.machina-secrets;
 in {
   sops.secrets.giuseppe-password.neededForUsers = true;
 
@@ -22,7 +24,7 @@ in {
     ];
 
     openssh.authorizedKeys.keys = [
-      (builtins.readFile ../../secrets/keys/id_sora.pub)
+      (builtins.readFile "${secretsPath}/public_keys/id_sora.pub")
     ];
   };
 

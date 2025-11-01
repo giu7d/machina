@@ -1,6 +1,8 @@
-{inputs, ...}: {
+{inputs, ...}: let
+  secretsPath = builtins.toString inputs.machina-secrets;
+in {
   sops = {
-    defaultSopsFile = ../../secrets.yaml;
+    defaultSopsFile = "${secretsPath}/secrets.yaml";
     validateSopsFiles = false;
 
     age = {
