@@ -21,7 +21,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak?ref=v0.6.0";
     # Personal Repos
     machina-secrets = {
-      url = "git+ssh://git@github.com:giu7d/machina-secrets.git?ref=main&shallow=1";
+      url = "git+ssh://git@github.com/giu7d/machina-secrets.git?ref=main&shallow=1";
       flake = false;
     };
   };
