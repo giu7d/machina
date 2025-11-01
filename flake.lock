@@ -66,10 +66,10 @@
     "machina-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1762003949,
-        "narHash": "sha256-bqSrsciF4fveDTEbPZlst6S9cLmk27QsLJUk0JXYFWw=",
+        "lastModified": 1762010874,
+        "narHash": "sha256-wKwEC5Gdcbx5duzC4Tn+UY0skifZIbTaB4Tsl8R/J6I=",
         "ref": "main",
-        "rev": "3f00e46c12f6f13b4a3c276090836f0c882b9162",
+        "rev": "cc145a1d2289c354c2856acc37f9af27d2c30d6a",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/giu7d/machina-secrets.git"
