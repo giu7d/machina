@@ -4,10 +4,14 @@ inputs: let
     home-manager.useUserPackages = true;
     home-manager.backupFileExtension = "bak";
     home-manager.extraSpecialArgs = {inherit inputs;};
+    home-manager.sharedModules = [
+      inputs.sops.homeManagerModules.sops
+    ];
     home-manager.users.giuseppe.imports =
       [
         ../users/giuseppe/configs/home.nix
         ../users/giuseppe/configs/gitconfig.nix
+        ../users/giuseppe/configs/secrets.nix
       ]
       ++ extraImports;
   };
