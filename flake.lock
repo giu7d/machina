@@ -63,6 +63,24 @@
         "type": "github"
       }
     },
+    "machina-secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1762003949,
+        "narHash": "sha256-bqSrsciF4fveDTEbPZlst6S9cLmk27QsLJUk0JXYFWw=",
+        "ref": "main",
+        "rev": "3f00e46c12f6f13b4a3c276090836f0c882b9162",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/giu7d/machina-secrets.git"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/giu7d/machina-secrets.git"
+      }
+    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1739444422,
@@ -116,6 +134,7 @@
         "disko": "disko",
         "home-manager": "home-manager",
         "home-manager-unstable": "home-manager-unstable",
+        "machina-secrets": "machina-secrets",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
