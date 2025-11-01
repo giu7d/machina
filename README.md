@@ -5,25 +5,32 @@ All my NixOS systems configuration in a single place.
 ## Hosts
 
 1.  Hana - Personal Computer
-2.  ~~TBD - Home Server~~
+2.  Sora - Home Server
 
-## Commands
+## Setup
 
-Update flake
+### Configuring secrets
 
-```bash
-nix flake update
+First, add the ssh config to `~/.ssh/config` to the current machine.
+
+```
+Host github.com
+        IdentitiesOnly yes
+        IdentityFile ~/.ssh/<key>
 ```
 
-Evaluate and test flakes
+**Obs.:** Make sure the key is configured in github
 
-```bash
-nix flake check
+Then, get the machina secrets using the update command:
+
+```
+nix flake update machina-secrets --flake "<path>#<host>"
 ```
 
-Execute flake
+### Install
 
-```bash
+To install, run:
+
+```
 sudo nixos-rebuild switch --flake <path>#<host>
-# sudo nixos-rebuild switch --flake ~/Workspaces/machina#hana
 ```
