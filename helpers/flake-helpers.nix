@@ -38,6 +38,7 @@ in {
         ]
         ++ extraModules;
     };
+    devShells."x86_64-linux".default = import ../shells/dev.nix {inherit inputs;};
   };
   mkMerge = inputs.nixpkgs.lib.lists.foldl' (
     a: b: inputs.nixpkgs.lib.attrsets.recursiveUpdate a b

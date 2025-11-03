@@ -23,7 +23,6 @@
     # Development
     vscode
     gh
-    devbox
     # Security
     yubioath-flutter
     protonvpn-gui
