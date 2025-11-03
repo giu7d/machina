@@ -19,6 +19,8 @@
     # Enable extensions
     #
     "org/gnome/shell" = {
+      allow-extension-installation = true;
+      disable-user-extensions = false;
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
         "Bluetooth-Battery-Meter@maniacx.github.com"
