@@ -65,5 +65,12 @@
       maximize = [];
       minimize = [];
     };
+
+    # Custom Keybinds
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      name = "Emote";
+      binding = "<Control><Super>space";
+      command = "flatpak run com.tomjwatson.Emote";
+    };
   };
 }
