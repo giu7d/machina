@@ -1,8 +1,13 @@
 pkgs:
 pkgs.mkShell {
   packages = with pkgs; [
-    nodejs
+    # Web Dev
+    nodejs_24
+    nodejs_24.pkgs.pnpm
+
+    # Game Dev
     lua
+    love
   ];
 
   buildInputs = [pkgs.zsh];
