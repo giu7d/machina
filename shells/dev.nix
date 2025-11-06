@@ -6,8 +6,8 @@ pkgs.mkShell {
     nodejs_24.pkgs.pnpm
 
     # Game Dev
-    lua
-    love
+    lua5_4
+    love_11
   ];
 
   buildInputs = [pkgs.zsh];
