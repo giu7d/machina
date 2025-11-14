@@ -12,6 +12,7 @@
     appindicator
     bluetooth-battery-meter
     gsconnect
+    user-themes
   ];
 
   dconf.settings = {
@@ -27,6 +28,7 @@
         "blur-my-shell@aunetx"
         "dash-to-dock@micxgx.gmail.com"
         "gsconnect@andyholmes.github.io"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
     };
 
