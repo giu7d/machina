@@ -27,6 +27,7 @@
     yubioath-flutter
     protonvpn-gui
     # Personal
+    gnome-tweaks
     gnome-software
     youtube-music
   ];
