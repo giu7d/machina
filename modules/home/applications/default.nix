@@ -9,7 +9,6 @@
   # https://github.com/gmodena/nix-flatpak?tab=readme-ov-file#notes-on-homemanager
   imports = [
     inputs.nix-flatpak.homeManagerModules.nix-flatpak
-    ./winboat.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
