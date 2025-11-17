@@ -84,9 +84,10 @@
   #
   # Packages
   #
-  programs.nh = {
-    enable = true;
-  };
+  environment.systemPackages = with pkgs; [
+    appimage-run
+    iptables
+  ];
 
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
@@ -102,10 +103,9 @@
     binfmt = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    appimage-run
-    iptables
-  ];
+  programs.nh = {
+    enable = true;
+  };
 
   #
   # Environment Variables
