@@ -108,6 +108,7 @@
   #
   environment.sessionVariables = {
     FLAKE_HOME = "$HOME/Workspaces/machina";
+    NH_OS_FLAKE = "$HOME/Workspaces/machina";
     FLAKE_HOST = "hana";
   };
 }

@@ -34,3 +34,7 @@ To install, run:
 ```
 sudo nixos-rebuild switch --flake <path>#<host>
 ```
+
+## To Do
+
+1. Setup flake-parts
