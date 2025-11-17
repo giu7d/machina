@@ -84,6 +84,11 @@
   #
   # Packages
   #
+  programs.nh = {
+    enable = true;
+    flake = "/home/giuseppe/Workspaces/machina";
+  };
+
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
     wantedBy = ["multi-user.target"];
@@ -108,7 +113,6 @@
   #
   environment.sessionVariables = {
     FLAKE_HOME = "$HOME/Workspaces/machina";
-    NH_OS_FLAKE = "$HOME/Workspaces/machina";
     FLAKE_HOST = "hana";
   };
 }

@@ -96,8 +96,4 @@
     jq
     fastfetch
   ];
-
-  programs.nh = {
-    enable = true;
-  };
 }
