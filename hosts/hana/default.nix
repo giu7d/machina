@@ -86,7 +86,6 @@
   #
   programs.nh = {
     enable = true;
-    flake = "/home/giuseppe/Workspaces/machina";
   };
 
   services.flatpak.enable = true;
@@ -112,6 +111,7 @@
   # Environment Variables
   #
   environment.sessionVariables = {
+    NH_FLAKE = "$HOME/Workspaces/machina";
     FLAKE_HOME = "$HOME/Workspaces/machina";
     FLAKE_HOST = "hana";
   };
