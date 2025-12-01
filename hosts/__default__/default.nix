@@ -89,6 +89,7 @@
   #
   programs.git.enable = true;
   programs.neovim.enable = true;
+  programs.nh.enable = true;
 
   environment.systemPackages = with pkgs; [
     wget

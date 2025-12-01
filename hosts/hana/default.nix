@@ -103,10 +103,6 @@
     binfmt = true;
   };
 
-  programs.nh = {
-    enable = true;
-  };
-
   #
   # Environment Variables
   #
