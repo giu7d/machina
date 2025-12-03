@@ -35,6 +35,7 @@
         # Global Modules
         [
           ./modules/global/plymouth
+          ./modules/global/gnome
           ./modules/global/gdm
           ./modules/global/keyboard
           ./modules/global/steam
