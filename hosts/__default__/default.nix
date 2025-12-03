@@ -11,7 +11,7 @@
   #
   # Base Nix Setup
   #
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = true;
@@ -78,6 +78,7 @@
     LC_TIME = "pt_BR.UTF-8";
     LC_CTYPE = lib.mkDefault "pt_BR.UTF-8"; # Add cedilla support
   };
+
   # Add cedilla support
   environment.variables = {
     GTK_IM_MODULE = "cedilla";

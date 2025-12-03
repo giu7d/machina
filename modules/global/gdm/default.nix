@@ -7,7 +7,7 @@
   monitorsXmlContent = builtins.readFile ./files/monitors.xml;
   monitorsConfig = pkgs.writeText "gdm_monitors.xml" monitorsXmlContent;
 in {
-  services.xserver.displayManager.gdm.enable = lib.mkForce true;
+  services.displayManager.gdm.enable = lib.mkForce true;
 
   # Setup Theme
   programs.dconf.profiles.gdm = {
