@@ -10,6 +10,10 @@
   # Load nvidia driver
   services.xserver.videoDrivers = ["nvidia"];
 
+  # Accept nvidia licenses
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
+
   hardware.nvidia = {
     open = false;
 
