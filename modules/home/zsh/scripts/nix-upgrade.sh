@@ -2,15 +2,15 @@ CURRENT_DIR=$(pwd)
 
 echo "🔧 Updating the system…"
 
-cd "$FLAKE_HOME" || return 1
+cd "$NH_FLAKE" || return 1
 
-nix flake update --flake "$FLAKE_HOME" || return 1
+nix flake update --flake "$NH_FLAKE" || return 1
 
 git add flake.lock
 
 git commit -m "chore: update nix flake" > /dev/null || echo "Nothing to commit"
 
-sudo nixos-rebuild switch --flake "$FLAKE_HOME#$FLAKE_HOST"
+nh os switch --update
 
 cd "$CURRENT_DIR" || return 1
 

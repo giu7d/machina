@@ -57,11 +57,11 @@ in {
       edit = "nvim";
 
       # Nix aliases
-      nix-check = "nix flake check $FLAKE_HOME";
+      nix-check = "nix flake check $NH_FLAKE";
       nix-upgrade = "${./scripts/nix-upgrade.sh}";
       nix-push = "${./scripts/nix-push.sh}";
-      nix-rebuild = "sudo nixos-rebuild switch --flake $FLAKE_HOME#$FLAKE_HOST";
-      nix-rebuild-boot = "sudo nixos-rebuild boot --flake $FLAKE_HOME#$FLAKE_HOST";
+      nix-rebuild = "nh os switch";
+      nix-rebuild-boot = "nh os boot";
     };
   };
 

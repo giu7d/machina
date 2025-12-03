@@ -2,7 +2,7 @@ CURRENT_DIR=$(pwd)
 
 echo "🔧 Pushing changes..."
 
-cd "$FLAKE_HOME" || return 1
+cd "$NH_FLAKE" || return 1
 
 git push origin main
 
