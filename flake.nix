@@ -50,5 +50,24 @@
           ./modules/home/zsh
           ./modules/home/fastfetch
         ])
+      (mkNixos "kage" inputs.nixpkgs
+        # Global Modules
+        [
+          ./modules/global/plymouth
+          ./modules/global/gnome
+          ./modules/global/gdm
+          ./modules/global/keyboard
+          ./modules/global/steam
+          ./modules/global/docker
+        ]
+        # Home Modules
+        [
+          ./modules/home/gtk
+          ./modules/home/applications
+          ./modules/home/kitty
+          ./modules/home/fonts
+          ./modules/home/zsh
+          ./modules/home/fastfetch
+        ])
     ];
 }
